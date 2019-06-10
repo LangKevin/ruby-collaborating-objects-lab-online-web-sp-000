@@ -1,15 +1,15 @@
 require 'pry'
 
 class MP3Importer
-  attr_accessor :path, :files
+  attr_accessor :path, :filenames
   def initialize(pathName)
     @path = pathName
-    @files = []
+    @filenames = []
   end
   def files
     Dir.entries(path).each do |file|
       # if !(file.include? "..")
-        @files << "#{file}"
+        @filenames << "#{file}"
       # end
     end
     @files.delete_if {|x| x == "." || x == ".."}

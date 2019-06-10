@@ -24,7 +24,8 @@ class Artist
   end
 
   def print_songs
-
+    @songs.select do |item|
+      puts "#{item.name}"  
   end  
 
   def save

@@ -12,6 +12,7 @@ class MP3Importer
         @files << "#{file}"
       end
     end
+    @filenames.delete_if {|x| x == "." || x == ".."}
     binding.pry
   end
 end

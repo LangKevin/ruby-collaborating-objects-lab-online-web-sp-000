@@ -1,6 +1,12 @@
 class MP3Importer
-  attr_accessor :path
+  attr_accessor :path, :files
   def initialize(pathName)
     @path = pathName
+    @files = []
+  end
+  def files
+    Dir.entries(path).each do |filename|
+      @files << "#{filename}"
+    end
   end
 end

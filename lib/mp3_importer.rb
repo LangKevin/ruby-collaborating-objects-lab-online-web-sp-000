@@ -8,7 +8,8 @@ class MP3Importer
   end
   def files
     Dir.entries(path).each do |file|
-      @files << "#{file}"
+      if !(file.include?)
+        @files << "#{file}"
     end
     binding.pry
   end

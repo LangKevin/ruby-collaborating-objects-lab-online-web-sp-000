@@ -14,14 +14,14 @@ class Artist
   def find_or_create_by_name(name)
     result = nil
     @@all.select do |item|
-      if item.name == name 
+      if item.name == name
         result = item
-      end    
-    end  
-    if result == nil 
-      result = Artist.new(name) 
-    end  
-  end  
+      end
+    end
+    if result == nil
+      result = Artist.new(name)
+    end
+  end
 
   def save
     @@all << self

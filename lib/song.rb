@@ -6,7 +6,7 @@ class Song
   def addArtist(artName)
     self.artist = Artist.new(songArr[0])
     self.artist.save
-    artist.add_song(self)
+    self.artist.add_song(self)
   end
 
   def self.new_by_filename(file_name)

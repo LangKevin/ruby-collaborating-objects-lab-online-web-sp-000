@@ -9,6 +9,7 @@ class Song
     song.name = songArr[1]
     if song.artist == nil
       song.artist = Artist.new(songArr[0])
+    end
     song
   end
 end

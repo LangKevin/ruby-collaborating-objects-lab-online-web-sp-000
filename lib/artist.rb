@@ -6,6 +6,9 @@ class Artist
     @name = name
   end
 
+  def add_song()
+  end  
+
   def save
     @@all << self
   end

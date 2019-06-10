@@ -30,7 +30,7 @@ class Artist
   end
 
   def self.all
-    @all
+    @@all
   end
 
   def save

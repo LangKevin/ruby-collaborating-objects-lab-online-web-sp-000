@@ -7,6 +7,7 @@ class Song
     song = Song.new(file_name)
     songArr = file_name.split(" - ")
     song.name = songArr[1]
+    song.artist.name = songArr[0]
     song
   end
 end

@@ -25,7 +25,7 @@ class Artist
 
   def print_songs
     @songs.select do |item|
-      puts "#{item.name}"  
+      puts "#{item.name}"
     end
   end
 

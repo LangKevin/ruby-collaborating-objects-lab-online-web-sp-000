@@ -8,8 +8,12 @@ class Artist
   end
 
   def add_song(song)
-    @songs << song  
+    @songs << song
   end
+
+  def find_or_create_by_name(name)
+
+  end  
 
   def save
     @@all << self

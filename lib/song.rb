@@ -3,13 +3,17 @@ class Song
   def initialize(name)
     @name = name
   end
+  def addArtist(artName)
+    self.artist = Artist.new(songArr[0])
+    self.artist.save
+    artist.add_song(self)
+  end
+    
   def self.new_by_filename(file_name)
     song = Song.new(file_name)
     songArr = file_name.split(" - ")
     song.name = songArr[1]
-    # song.artist = Artist.find_or_create_by_name(songArr[0])
-    song.artist = Artist.new(songArr[0])
-    song.artist.save
+    song.AddArtist
     song
   end
 end

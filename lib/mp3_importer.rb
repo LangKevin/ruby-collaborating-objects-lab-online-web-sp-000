@@ -8,7 +8,7 @@ class MP3Importer
   end
   def files
     Dir.entries(path).each do |file|
-      if !(file.include?)
+      if !(file.include? ".")
         @files << "#{file}"
       end
     end

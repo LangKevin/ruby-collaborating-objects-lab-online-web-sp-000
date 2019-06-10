@@ -10,6 +10,6 @@ class MP3Importer
     Dir.entries(path).each do |file|
       @files << "#{file}"
     end
-    building.pry
+    binding.pry
   end
 end

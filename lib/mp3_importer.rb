@@ -16,8 +16,9 @@ class MP3Importer
   end
 
   def import
+    self.files
     fileNames.each do |item|
-      # fileArr = filename.split(" - ") 
+      # fileArr = filename.split(" - ")
       Song.new_by_filename(item)
     end
   end

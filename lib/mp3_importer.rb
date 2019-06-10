@@ -1,3 +1,5 @@
+require 'pry'
+
 class MP3Importer
   attr_accessor :path, :files
   def initialize(pathName)
@@ -8,5 +10,6 @@ class MP3Importer
     Dir.entries(path).each do |file|
       @files << "#{file}"
     end
+    building.pry
   end
 end
